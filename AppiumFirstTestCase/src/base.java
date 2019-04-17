@@ -19,12 +19,12 @@ public class base {
 		File f = new File("src");
 		
 		//File fs = new File(f, "RFPGurus.apk");
-		//File fs = new File(f, "Sell4Bids.apk");
-		File fs = new File(f, "ApiDemos-debug.apk");
+		File fs = new File(f, "Sell4BidsLatest.apk");
+		//File fs = new File(f, "ApiDemos-debug.apk");
 		
 		
 		DesiredCapabilities cap = new DesiredCapabilities();
-		cap.setCapability(MobileCapabilityType.DEVICE_NAME, "9886335257444c434a");
+		cap.setCapability(MobileCapabilityType.DEVICE_NAME, "520376b7b4bc24cb");
 		cap.setCapability(MobileCapabilityType.APP, fs.getAbsolutePath());
 		
 		//RFPGurus
@@ -32,10 +32,11 @@ public class base {
 		//cap.setCapability("appActivity", "com.brainplow.rfpgurus.activity.SplashScreen");
 		
 		//Sell4Bids
-//		cap.setCapability(AndroidMobileCapabilityType.AUTO_GRANT_PERMISSIONS, "true");
-//		cap.setCapability("appPackage", "com.usman.brainplow.sell4bids");
-//		cap.setCapability("appActivity", "com.braiplow.sell4bids.Activity_SplashScreen");
-		
+		cap.setCapability(AndroidMobileCapabilityType.AUTO_GRANT_PERMISSIONS, "true");
+		cap.setCapability("appPackage", "com.usman.brainplow.sell4bids");
+		cap.setCapability("appActivity", "com.braiplow.sell4bids.Activity_SplashScreen");
+		cap.setCapability("fullReset","false");
+		cap.setCapability("noReset", true);
 		
 		//capabilities.setCapability(AndroidMobileCapabilityType.APP_WAIT_ACTIVITY, "com.brainplow.*");
 		
